@@ -14,3 +14,6 @@ Given `"(+ (* 3 5) (/ 8 4))"` the program should output
    (/ 8 4)
 )
 ```
+
+## Notes
+- Use [external lib](https://github.com/mar10/nutree/) to handle tree implementation ?

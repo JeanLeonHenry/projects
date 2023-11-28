@@ -1,21 +1,18 @@
 """Interpreter of simple Lisp math with pretty printing abilities"""
 
 
+ops = "+-*/"
+
+
 class Expression:
     def __init__(self, input: str):
+        self.expr = self.parse(input)
+
+    def parse(self, expr: str):
         pass
 
     def evaluate(self) -> float:
-        pass
+        return 0
 
     def pretty_print(self) -> str:
-        pass
-
-
-if __name__ == "__main__":
-    expr = Expression(input("Input your expression : "))
-    print(f"""
-    Result : {expr.evaluate()}
-    Print : 
-    {expr.pretty_print()}
-    """)
+        return ""
