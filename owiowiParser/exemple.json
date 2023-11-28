@@ -1,0 +1,36 @@
+{
+  "id": "22412785",
+  "name": "Purée de pomes de terre _ carottes (céleri)",
+  "description": "",
+  "url": "",
+  "image": "https://artdevivre.typepad.fr/.a/6a0133f5a8e69b970b0147e1e177ab970b-800wi",
+  "prepTime": "PT10H0M0S",
+  "cookTime": "PT25H0M0S",
+  "totalTime": "PT35H0M0S",
+  "recipeCategory": "Féculent",
+  "keywords": "MrCuisine",
+  "recipeYield": 4,
+  "tool": [],
+  "recipeIngredient": [
+    "650 g de pommes de terre",
+    "350 g de légumes (carottes, courges, brocolis, céleri rave...)",
+    "300 mL de lait",
+    "30 g de beurre",
+    "1 pincée de noix de muscade râpée"
+  ],
+  "recipeInstructions": [
+    "Faire chauffer le lait et le beurre : 10 min / 90° / vitesse 1. Saler et poivrer.",
+    "Pendant ce temps, laver, éplucher et couper les légumes en morceaux (2 ou 3 cm)",
+    "Les ajouter au lait chaud et laisser cuire : 25 min / 90° / vitesse 1.",
+    "Mixer (40 s / vitesse 4) et servir bien chaud."
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation"
+  },
+  "@context": "http://schema.org",
+  "@type": "Recipe",
+  "dateModified": "2023-08-12T18:39:17+0000",
+  "dateCreated": "2023-08-12T18:36:23+0000",
+  "printImage": true,
+  "imageUrl": "/index.php/apps/cookbook/webapp/recipes/22412785/image?size=full"
+}
