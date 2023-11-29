@@ -11,8 +11,7 @@ Given `"(+ (* 3 5) (/ 8 4))"` the program should output the result of $(3\times5
 Given `"(+ (* 3 5) (/ 8 4))"` the program should output
 ```python
 (+ (* 3 5)
-   (/ 8 4)
-)
+   (/ 8 4))
 ```
 
 ## Notes
