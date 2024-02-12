@@ -6,6 +6,7 @@ Goals :
 
 ## Goal 1
 Given `"(+ (* 3 5) (/ 8 4))"` the program should output the result of $(3\times5)+(8/4)$, i.e. $17$.
+⚠ `/` is implemented as integer division.
 
 ## Goal 2
 Given `"(+ (* 3 5) (/ 8 4))"` the program should output
