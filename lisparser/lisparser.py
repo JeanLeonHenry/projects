@@ -2,9 +2,9 @@
 
 import re
 import operator as op
-from typing import Union
+from typing import Union, Sequence, List
 
-Tree = list[Union[str, 'Tree']]
+Tree = Sequence[Union[str, 'Tree']]
 OPS = dict(zip("+-*/", [op.add, op.sub, op.mul, op.floordiv]))
 
 
@@ -36,7 +36,7 @@ def parse(expr: str) -> Tree:
 
     operation = expr[1]
     to_parse = expr[3:-1]
-    stack = []
+    stack: List[str] = []
     split_index = None
     for index, c in enumerate(to_parse):
         if c == " " and not stack:
@@ -64,7 +64,7 @@ def parse(expr: str) -> Tree:
     return [operation, *map(parse, operands)]
 
 
-def evaluate(tree: list | str) -> int:
+def evaluate(tree: Tree) -> int:
     if isinstance(tree, str):
         return int(tree)
     operation, *operands = tree
