@@ -25,6 +25,7 @@ class ParsingTest(unittest.TestCase):
         exprs = """(+  2)
         12 3 
         (+  2)
+        (+  2345)
         ()
         (u 2 3)
         ()()
