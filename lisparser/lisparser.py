@@ -74,10 +74,22 @@ def evaluate(tree: Tree) -> int:
     return OPS[operation](*evaluated)
 
 
+def prettify(tree: Tree) -> str:
+    if isinstance(tree, list):
+        operation, op1, op2 = tree
+    else:
+        return tree
+    if all(isinstance(node, str) for node in tree):
+        return f"({operation} {op1} {op2})"
+    return f"({operation} {prettify(op1)}\n    {prettify(op2)})"
+
+
 if __name__ == "__main__":
     expr = input("Enter your lisp computation : ")
     try:
-        print(evaluate(parse(expr)))
+        parsed = parse(expr)
+        print(prettify(parsed))
+        print("Result : ", evaluate(parsed))
     except ValueError:
         print("Error : bad input")
     except ZeroDivisionError:

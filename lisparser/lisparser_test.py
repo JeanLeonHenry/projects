@@ -1,6 +1,6 @@
 import unittest
 
-from lisparser import parse, evaluate
+from lisparser import parse, evaluate, prettify
 
 
 class ParsingTest(unittest.TestCase):
@@ -62,3 +62,19 @@ class ParsingTest(unittest.TestCase):
                     evaluate(parse(expr))
 
                 self.assertRaises(ZeroDivisionError, divide_by_zero)
+
+    def test_printing(self):
+        exprs = """(+ 1 2)
+        (+ (+ 1 2) 3)
+        (+ 3 (+ 1 2))
+        (* (/ -6 4) (- 56 23))""".splitlines()
+        exprs = map(str.strip, exprs)
+        results = [
+            "(+ 1 2)",
+            "(+ (+ 1 2)\n    3)",
+            "(+ 3\n    (+ 1 2))",
+            "(* (/ -6\n        4)\n    (- 56\n        23))"
+        ]
+        for e, r in zip(exprs, results):
+            with self.subTest(e):
+                self.assertEqual(prettify(parse(e)), r, f"Failed printing {e}")
